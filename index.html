@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/Logo-clinica-dental.png">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <title>Clínica Dental 🦷</title>
+  </head>
+  <body id="top">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-top">
+        <div class="container">
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <!--<img src="/img/icons8-mail-50.png">-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"/><path d="M3 7l9 6l9 -6"/></svg>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=clinicadental@gmail.com" class="contact-link">clinicadental@gmail.com</a>
+            </li>
+
+            <li class="contact-item">
+              <!--<img src="/img/icons8-whatsapp-32.png">-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>
+              <a href="https://wa.me/666555444" class="contact-link">666 555 444</a>
+            </li>
+
+            <li class="contact-item">
+              <!--<img src="/img/icons8-marcador-50.png">-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"/></svg>
+              <a href="https://www.google.es/maps/place/Sol,+Centro,+Madrid/@40.4169376,-3.7065734,835m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd42287e1463b6cf:0x14a34120b9332d61!8m2!3d40.4166635!4d-3.7041687!16s%2Fg%2F1239jlt0?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" class="contact-link">C. Piruleta, 13</a>
+            </li>
+
+          </ul>
+          <button id="loadReactBtn">
+            <!--<img src="./img/icons8-usuario-en-círculo-24.png">-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="header-bottom">
+        <div class="container">
+          <a class="logo" href="#home">Clínica Dental 🦷</a>
+          <nav class="navbar-container">
+            <ul class="navbar-list">
+              <li>
+                <a href="#home" class="navbar-link" data-nav-link>Home</a>
+              </li>
+              <li>
+                <a href="#services" class="navbar-link" data-nav-link>Nuestros servicios</a>
+              </li>
+              <li>
+                <a href="#about" class="navbar-link" data-nav-link>Sobre nosotros</a>
+              </li>
+              <li>
+                <a href="#location" class="navbar-link" data-nav-link>Ubicación</a>
+              </li>
+              <li>
+                <a href="#contact" class="navbar-link" data-nav-link>Contacto</a>
+              </li>
+            </ul>
+          </nav>
+
+          <button class="nav-toggle-btn">
+            <img src="./img/icons8-menu-50.png" class="menu-icon">
+            <img src="./img/icons8-x-24.png" class="menu-close">
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!--PÁGINA PRINCIPAL-->
+    <main>
+      <article>
+        <!-- INTRO -->
+        <section class="section-intro" id="home">
+          <div class="container">
+            <div class="intro-content">
+              <p class="p-title">BIENVENIDO A CLINICA DENTAL</p>
+              <h1>Tu sonrisa es nuestra prioridad</h1>
+              <p>"En nuestra clínica dental, combinamos tecnología de vanguardia y atención personalizada para cuidar tu sonrisa. Ofrecemos servicios de odontología general, estética y especializada en un ambiente cómodo y seguro."</p>
+              <a href="https://wa.me/666555444"><button class="contactBtn">CONTACTO</button></a>
+            </div>
+            <figure class="intro-banner">
+              <img src="./img/Logo-clinica-dental.png">
+            </figure>
+          </div>
+        </section>
+
+        <!--NUESTROS SERVICIOS-->
+        <section class="section-services" id="services">
+          <div class="container">
+            <p class="p-title">CLINICA DENTAL</p>
+            <h2>Nuestros servicios</h2>
+            <ul class="services-list">
+              <li>
+                <div class="services-card">
+                  <div class="services-icon">
+                    <img src="./img/icons8-dental-91 (4).png">
+                  </div>
+                  <div>
+                    <h3>Ortodoncia</h3>
+                    <p>Colocación de brackets, alineadores invisibles (como Invisalign) para corregir la posición de los dientes.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="services-card">
+                  <div class="services-icon">
+                    <img src="./img/icons8-dental-91 (3).png">
+                  </div>
+                  <div>
+                    <h3>Endodoncia</h3>
+                    <p>Tratamiento de conductos para salvar dientes dañados o infectados.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="services-card">
+                  <div class="services-icon">
+                    <img src="./img/icons8-dental-91 (2).png">
+                  </div>
+                  <div>
+                    <h3>Implantes dentales</h3>
+                    <p>Sustitución de dientes perdidos mediante raíces artificiales de titanio.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="services-card">
+                  <div class="services-icon">
+                    <img src="./img/icons8-oral-hygiene-91.png">
+                  </div>
+                  <div>
+                    <h3>Limpieza dental profesional</h3>
+                    <p>Eliminación de placa y sarro para mantener una buena salud bucal.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="services-card">
+                  <div class="services-icon">
+                    <img src="./img/icons8-dental-91 (1).png">
+                  </div>
+                  <div>
+                    <h3>Estética dental</h3>
+                    <p>Blanqueamiento, carillas de porcelana, y remodelación dental para mejorar la apariencia de la sonrisa.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="services-card">
+                  <div class="services-icon">
+                    <img src="./img/icons8-dental-91 (6).png">
+                  </div>
+                  <div>
+                    <h3>Cirugía oral</h3>
+                    <p>Extracción de muelas del juicio, injertos óseos, o tratamientos quirúrgicos de encías.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="services-banner">
+                <figure>
+                  <img src="./img/banner-dental.png">
+                </figure>
+              </li>
+
+            </ul>
+          </div>
+        </section>
+
+        <!--SOBRE NOSOTROS-->
+        <section class="section-about" id="about">
+          <div class="container">
+            <figure>
+              <img src="./img/preventive-dentistry-8858477_1280.jpg">
+            </figure>
+            <div class="about-content">
+              <p class="p-title">SOBRE NOSOTROS</p>
+              <h2>Conocenos</h2>
+              <p>
+                En Clínica Dental llevamos más de 15 años dedicados al cuidado de la salud bucal de nuestros pacientes. Nuestra experiencia nos ha permitido acompañar a cientos de personas en su camino hacia una sonrisa más sana, funcional y estética.
+                Contamos con un equipo de especialistas altamente capacitados en diversas áreas de la odontología, como ortodoncia, implantología, estética dental, endodoncia, odontopediatría y cirugía oral. Cada tratamiento que realizamos se basa en la confianza, la atención personalizada y el uso de tecnología de última generación para garantizar resultados seguros y duraderos.
+              </p>
+              <p>
+                Durante todos estos años, nos hemos mantenido fieles a nuestra filosofía: ofrecer un trato cercano, profesional y honesto.<br> 
+                Porque no solo tratamos dientes, tratamos personas.<br>
+                Más de una década de sonrisas nos respalda. ¡Y queremos seguir sumando la tuya!
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- DOCTORES -->
+        <section class="section-doctor">
+          <div class="container">
+            <p class="p-title">CONOCENOS</p>
+            <h2>Nuestro equipo</h2>
+            <ul class="scrollbar">
+              <li class="scrollbar-item">
+                <div class="doctor-card">
+                  <div>
+                    <img src="./img/dentista2.jpg">
+                  </div>
+                  <h3>
+                    <a>DRA. LISA SIMPSON</a>
+                  </h3>
+                  <p class="p-title">Directora Médica y Especialista en Estética Dental</p>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="doctor-card">
+                  <div>
+                    <img src="./img/dentista1.jpg">
+                  </div>
+                  <h3>
+                    <a>DR. ANTONIO LOBATO</a>
+                  </h3>
+                  <p class="p-title">Implantólogo y Cirujano Oral</p>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="doctor-card">
+                  <div>
+                    <img src="./img/dentista3.jpg">
+                  </div>
+                  <h3>
+                    <a>DRA. EMMA STONE</a>
+                  </h3>
+                  <p class="p-title">Odontopediatra</p>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="doctor-card">
+                  <div>
+                    <img src="./img/dentista4.jpg">
+                  </div>
+                  <h3>
+                    <a>DR. FERNANDO ALONSO</a>
+                  </h3>
+                  <p class="p-title">Higienista dental</p>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="doctor-card">
+                  <div>
+                    <img src="./img/dentista5.jpg">
+                  </div>
+                  <h3>
+                    <a>LUCAS VAZQUEZ</a>
+                  </h3>
+                  <p class="p-title">Coordinador de Atención al Paciente</p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </section>
+
+        <!--UBICACIÓN-->
+        <section class="section-location" id="location">
+          <div class="container">
+            <p class="p-title">UBICACIÓN</p>
+            <h2>¿Dónde puedes encontrarnos?</h2>
+            <div id="map" class="map"></div>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <a>Clinica Dental</a>
+            <p>
+              Más de una década de sonrisas nos respalda. <br>¡Y queremos seguir sumando la tuya!
+            </p></br>
+            <span>
+              Lunes - Viernes:<br>
+              09:00 - 21:00
+            </span>
+          </div>
+          <ul class="footer-list" id="contact">
+            <li>
+              <p>Contacto</p>
+            </li>
+
+            <li>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"/></svg>
+                <a href="https://www.google.es/maps/place/Sol,+Centro,+Madrid/@40.4169376,-3.7065734,835m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd42287e1463b6cf:0x14a34120b9332d61!8m2!3d40.4166635!4d-3.7041687!16s%2Fg%2F1239jlt0?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D">C. Piruleta, 13</a>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>
+                <a href="https://wa.me/666555444">666 555 444</a>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"/><path d="M3 7l9 6l9 -6"/></svg>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=clinicadental@gmail.com">clinicadental@gmail.com</a>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+        <!-- BOTON SUBIR -->
+        <a href="#top" class="btnsubir">
+          <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M18 14l-6-6-6 6h12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>        
+        </a>
+      </div>
+    </footer>
+
+    <!-- Modal que será el popup -->
+    <div id="modalOverlay"></div>
+    <div id="root" style="display: none;"></div>
+    <!-- Mapa y menu-->
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="/src/js/map.js"></script>
+    <script type="module" src="/src/js/script.jsx"></script>
+  </body>
+</html>
