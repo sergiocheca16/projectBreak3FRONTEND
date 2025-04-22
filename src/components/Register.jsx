@@ -7,10 +7,12 @@ function Register() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/api/auth/register', { name, email, password });
+      await axios.post(`${API_URL}/api/auth/register`, { name, email, password });
       window.location.href = '/login';
     } catch (err) {
       setError('Error al registrarse');

@@ -12,12 +12,14 @@ function Appointments() {
   const role = localStorage.getItem('role');
   const userId = localStorage.getItem('userId');
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
   useEffect(() => {
     if (!token) return navigate('/login');
 
     const fetchAppointments = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/api/appointments', {
+        const res = await axios.get(`${API_URL}/api/appointments`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setAppointments(res.data);
@@ -32,7 +34,7 @@ function Appointments() {
   const handleCreateAppointment = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/appointments', { date, reason }, {
+      const response = await axios.post(`${API_URL}/api/appointments`, { date, reason }, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setDate('');
@@ -46,7 +48,7 @@ function Appointments() {
 
   const handleUpdateAppointment = async (id, newStatus, newDate) => {
     try {
-      await axios.put(`http://localhost:3000/api/appointments/${id}`, {
+      await axios.put(`${API_URL}/api/appointments/${id}`, {
         status: newStatus,
         date: newDate,
       }, {
